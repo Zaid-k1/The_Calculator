@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-/*int main() {
+int main() {
 	
 	double num2;
 	double num1;
@@ -18,29 +18,27 @@
 	double mult = num1 * num2;
 	double div = num1 / num2;
 	
-	if (func == '+') {
-		printf("%f", sum);
-	}
-	
-	else if (func == '-') {
-		printf("%f", sub);
-	}
-	
-	else if (func == '*') {
-		printf("%f", mult);
-	}
-	
-	else if (func == '/') {
-		printf ("%f", div);
-	}
-	
-	else {
-		printf ("Invalid function,\n");
-		printf ("Please enter on of the (+, -, * or /) functions.");
+	switch (func) {
 		
-	}
+		case '+' :
+			printf("%f", sum);
+			break;
+		case '-' :
+			printf("%f", sub);
+			break;
+		case '*' :
+			printf("%f", mult);
+			break;
+		case '/' :
+			printf ("%f", div);
+			break;
+		default :
+			printf ("Invalid function,\n");
+			printf ("Please enter one of the (+, -, * or /) functions.");
 	
+	}
 	return 0;
 	
-} //yo
+}
+
 
