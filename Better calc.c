@@ -8,13 +8,12 @@ int main() {
 	double num1;
 	double num0;
 	char func;
-	int zaid = 6;
-	
 	
 	printf("Functions available for now: +, -, *, /, ^, v(for square root)\n");
-	while(zaid == 6) {
+	while(1) {
 	printf("Enter a function: ");
 	scanf(" %c", &func);										//When we use scanf for char we put a space first
+	
 	if (func != 'v') {										
 	printf("Enter first number: ");
 	scanf("%lf", &num1);                                       //When we use scanf for doubles we use %lf                                 
@@ -28,7 +27,6 @@ int main() {
 	double power = pow(num1, num2);
 	
 	switch (func) {
-		
 		case '+' :
 			printf("%.2f + %.2f = %.3f\n", num1, num2, sum);
 			break;
@@ -47,7 +45,7 @@ int main() {
 		default :
 			printf ("INVALID FUNCTION\n");
 			printf("Functions available for now: +, -, *, /, ^, v(for square root)\n");
-	}
+		}
 	}
 	else if (func == 'v') {
 		printf("Enter a number: ");
@@ -59,6 +57,7 @@ int main() {
 		printf ("INVALID FUNCTION\n");
 		printf("Functions available for now: +, -, *, /, ^, v(for square root)\n");
 	}
+	
 	}
 	return 0;
 	
