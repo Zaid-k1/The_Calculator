@@ -19,7 +19,7 @@ int main() {
 		cb=0;
 	}
 	
-	else if(func=='+'||func=='-'||func=='*'||func=='/')
+	else if(func=='+'||func=='-'||func=='*'||func=='/'||func=='^')
 	{										
 		printf("Enter first number: ");
 		scanf("%lf", &num1);                                       //When we use scanf for doubles we use %lf                                 
@@ -60,27 +60,27 @@ int main() {
 		int i, num0fac=num0;
 		double squareRoot = sqrt(num0);
 		double absValue;
-			switch(func){
-				case'v':
-					printf("%f\n", squareRoot);
-					break;
-				case'|':
-					if(num0>=0) absValue=num0;
-					else absValue=-num0;
-					printf("|%.3f|=%.3f\n", num0, absValue);
-					break;
-				case'!':
-					for(i=num0-1;i>=1;i--){
-						num0fac=num0fac*i;
-					}
-					printf("%.0f!=%d",num0,num0fac);
-					break;
-				default:
-					printf ("INVALID FUNCTION\n");
-					printf("Functions available for now: +, -, *, /, ^, v(for square root)\n");	
-			}
-
+		switch(func){
+			case'v':
+				printf("%f\n", squareRoot);
+				break;
+			case'|':
+				if(num0>=0) absValue=num0;
+				else absValue=-num0;
+				printf("|%.3f|=%.3f\n", num0, absValue);
+				break;
+			case'!':
+				for(i=num0-1;i>=1;i--){
+					num0fac=num0fac*i;
+				}
+				printf("%.0f!=%d",num0,num0fac);
+				break;
+			default:
+				printf ("INVALID FUNCTION\n");
+				printf("Functions available for now: +, -, *, /, ^, v(for square root)\n");	
 		}
+		}
+	
 	
 	}
 
